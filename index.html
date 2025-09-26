@@ -31,10 +31,6 @@
       <a href="#servicios">Servicios</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#trabajemos-juntos">Trabajemos juntos</a>
-      <div class="social-icons">
-        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://behance.net" target="_blank"><i class="fab fa-behance"></i></a>
-      </div>
     </nav>
     <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
   </header>
@@ -119,60 +115,86 @@
   <a href="#portfolio" class="btn">Ver portfolio completo</a>
 </section>
 <!-- SECCIÓN DE COMENTARIOS -->
-<section class="testimonios">
-  <h6>Lo que dicen nuestros clientes</h6>
-  <h2>Dejanos tu comentario</h2>
-
-  <form id="comentariosForm">
-    <div class="form-group">
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" required>
+<section class="reviews" id="reseñas">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="review-cards">
+    <div class="review-card">
+      <img src="img/logo1.png" alt="Logo Cliente 1" class="review-logo">
+      <p class="review-text">"Flolu Studio transformó nuestra identidad visual. ¡Excelente trabajo!"</p>
+      <p class="review-author">— Mariel Reyes, Diseñadora de interiores</p>
     </div>
-
-    <div class="form-group">
-      <label for="empresa">Empresa / Emprendimiento</label>
-      <input type="text" id="empresa" name="empresa">
+    <div class="review-card">
+      <img src="img/logo2.png" alt="Logo Cliente 2" class="review-logo">
+      <p class="review-text">"Todo el crecimiento de nuestro café fue en manos de ellos. Muy recomendados."</p>
+      <p class="review-author">— María López, Kamby café</p>
     </div>
-
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+    <div class="review-card">
+      <img src="img/logo6.png" alt="Logo Cliente 3" class="review-logo">
+      <p class="review-text">"Nuestra diseñadora gráfica, de interiores y web!!"</p>
+      <p class="review-author">— Equipo Plan Gourmet Pastas</p>
     </div>
+  </div>
+</section>
+<section class="work-with-us">
+  <div class="work-content">
+    <h2>Diseñemos juntos tus ideas</h2>
+    <p>
+      Si tenés un proyecto en mente y querés llevarlo al próximo nivel, 
+      contanos tu idea y trabajemos en equipo para hacerlo realidad.
+    </p>
 
-    <div class="form-group">
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-    </div>
-
-    <div class="form-group">
-      <label>Calificación</label>
-      <div class="estrellitas">
-        <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
-        <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
-        <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
-        <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
-        <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
+    <form class="contact-form" action="https://formspree.io/f/TU_ENDPOINT" method="POST">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Tu nombre completo" required>
       </div>
-    </div>
-
-    <button type="submit" class="btn">Enviar comentario</button>
-  </form>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="company" placeholder="Tu empresa o emprendimiento">
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Contanos sobre tu proyecto" required></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Enviar</button>
+    </form>
+  </div>
 </section>
 
-<!-- Popup de confirmación -->
-<div id="popupConfirm" class="popup-confirm">
-  <p>¡Gracias! Tu comentario se registró correctamente. Próximamente aparecerá en nuestra web.</p>
-  <button id="cerrarPopup">Cerrar</button>
-</div>
-
-  
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-    © 2025 Mi Estudio Gráfico — Todos los derechos reservados.
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="./img/logo.svg" alt="Logo" />
+        <p>Flolu' Studio © 2025</p>
+      </div>
+  
+      <nav class="footer-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#portafolio">portafolio</a>
+        <a href="#contacto">trabajemos juntos </a>
+      </nav>
+  
+       <div class="footer-social">
+      <a href="https://instagram.com" target="_blank">
+        <img src="./img/instagram (1).png" alt="Instagram" class="icon">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="./img/behance.png" alt="behance" class="icon">
+      </a>
+      <a href="https://linkedin.com" target="_blank">
+        <img src="./img/linkedin.png" alt="LinkedIn" class="icon">
+      </a>
+      <a href="mailto:tuemail@gmail.com">
+        <img src="./img/email.png" alt="Email" class="icon">
+      </a>
+    </div>
+    </div>
   </footer>
-
+  
   <!-- JS -->
   <script src="./JS/index.js"></script>
 
