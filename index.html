@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Estudio Gráfico</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome para íconos -->
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <a href="#inicio">
+        <img src="img/logo.svg" alt="Logo de tu estudio">
+      </a>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#trabajemos-juntos">Trabajemos juntos</a>
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://behance.net" target="_blank"><i class="fab fa-behance"></i></a>
+      </div>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="scroll-right">DISEÑO</span>
+        <span class="scroll-left">QUE CONECTA</span>
+      </h1>
+      <p>Identidades visuales, marcas y experiencias gráficas para destacar en el mundo digital.</p>
+      <a href="#trabajemos-juntos" class="btn">Trabajemos juntos</a>
+    </div>
+  </section>
+  <!-- Main (otras secciones) -->
+  <main>
+    <!-- Acerca del Estudio -->
+    <section class="about">
+      <div class="about-content">
+        <h6>Acerca del estudio</h6>
+        <h2>Hola! Somos Flolu Studio</h2>
+        <p>
+          Creamos identidades visuales y experiencias gráficas que conectan marcas con personas.
+          Nuestro enfoque combina diseño estratégico y creatividad para destacar en el mundo digital.
+        </p>
+        <a href="#portfolio" class="btn">Ver portfolio</a>
+      </div>
+      <div class="about-image">
+        <img src="img/estudio.png" alt="Imagen del estudio">
+      </div>
+    </section>
+    
+    <section class="services-ticker">
+      <div class="ticker">
+        <div class="ticker-content">
+          Branding · Identidad Visual · Diseño Web · Packaging · Ilustración · Social Media · Editorial · 
+          Branding · Identidad Visual · Diseño Web · Packaging · Ilustración · Social Media · Editorial · 
+        </div>
+      </div>
+    </section>    
+    <!-- Secciones futuras -->
+     <!-- SOBRE MÍ -->
+<section class="about-me">
+  <div class="about-me-content">
+    <h6>Sobre mí</h6>
+    <h2>Hola! Soy Agus</h2>
+    <p>
+      Diseñadora gráfica y creadora de <strong>Flolu Studio</strong>.  
+      Me apasiona transformar ideas en identidades visuales con propósito, estética y estrategia.
+    </p>
+    <a href="#trabajemos-juntos" class="btn">Conectemos</a>
+  </div>
+  <div class="about-me-img">
+    <img src="./img/agus.png" alt="Foto de Agus / Flolu Studio">
+  </div>
+</section>
+
+<!-- MINI INTRO AL PORTFOLIO -->
+<section class="portfolio-intro">
+  <h6>Portfolio</h6>
+  <h2>Marcas que confiaron en mí</h2>
+  <p>
+    Algunos de los proyectos y colaboraciones que realicé en branding, diseño editorial, web y más.
+  </p>
+  <div class="logo-grid">
+    <img src="./img/logo1.png" alt="Logo cliente 1">
+    <img src="./img/logo2.png" alt="Logo cliente 2">
+    <img src="./img/logo3.png" alt="Logo cliente 3">
+    <img src="./img/logo4.png" alt="Logo cliente 4">
+    <img src="./img/logo5.png" alt="Logo cliente 5">
+    <img src="./img/logo6.png" alt="Logo cliente 6">
+    <img src="./img/logo7.png" alt="Logo cliente 7">
+    <img src="./img/logo8.png" alt="Logo cliente 8">
+    <img src="./img/logo9.png" alt="Logo cliente 9">
+  </div>
+  <a href="#portfolio" class="btn">Ver portfolio completo</a>
+</section>
+<!-- SECCIÓN DE COMENTARIOS -->
+<section class="testimonios">
+  <h6>Lo que dicen nuestros clientes</h6>
+  <h2>Dejanos tu comentario</h2>
+
+  <form id="comentariosForm">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+
+    <div class="form-group">
+      <label for="empresa">Empresa / Emprendimiento</label>
+      <input type="text" id="empresa" name="empresa">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Calificación</label>
+      <div class="estrellitas">
+        <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+        <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+        <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+        <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+        <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn">Enviar comentario</button>
+  </form>
+</section>
+
+<!-- Popup de confirmación -->
+<div id="popupConfirm" class="popup-confirm">
+  <p>¡Gracias! Tu comentario se registró correctamente. Próximamente aparecerá en nuestra web.</p>
+  <button id="cerrarPopup">Cerrar</button>
+</div>
+
+  
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 Mi Estudio Gráfico — Todos los derechos reservados.
+  </footer>
+
+  <!-- JS -->
+  <script src="./JS/index.js"></script>
+
+
+<script>
+ function doPost(e) {
+  try {
+    var hoja = SpreadsheetApp.openById("https://docs.google.com/spreadsheets/d/1k3ZjZKVeKMYGRl5E2FBp1E5yYqsz3dhaMAh8YruGQCE/edit?gid=0#gid=0").getSheetByName("comentarios flolu"); // Cambiá Sheet1 si tu hoja tiene otro nombre
+    var data = JSON.parse(e.postData.contents);
+
+    hoja.appendRow([
+      data.nombre || "",
+      data.empresa || "",
+      data.email || "",
+      data.mensaje || "",
+      data.rating || 0,
+      new Date()
+    ]);
+
+    return ContentService.createTextOutput(JSON.stringify({ "result": "success" }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ "result": "error", "message": err }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+</script>
+
+</body>
+</html>
+
