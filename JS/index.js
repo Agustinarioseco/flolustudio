@@ -1,47 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('nav');
-  
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  });
+// ===== Menú responsive =====
+const menuToggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav');
+const navLinks = nav.querySelectorAll('a');
 
-  const form = document.getElementById('comentariosForm');
-const popup = document.getElementById('popupConfirm');
-const cerrar = document.getElementById('cerrarPopup');
+// Abrir/cerrar menú al hacer click en el botón
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const data = {
-    nombre: form.nombre.value,
-    empresa: form.empresa.value,
-    email: form.email.value,
-    mensaje: form.mensaje.value,
-    rating: form.rating.value || 0
-  };
-
-  fetch('https://script.google.com/macros/s/AKfycbzFEiflRvy7daZIPUu8V-qpzJ3KkYGk7fa9jdnbFLjkNPyaerHMDOy-SZWolfP6O-Ot6A/exec', {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: { 'Content-Type': 'application/json' }
-  })
-  .then(res => res.json())
-  .then(response => {
-    console.log(response);
-    popup.classList.add('show');
-    form.reset();
-  })
-  .catch(err => {
-    console.error(err);
-    alert('Hubo un error al enviar el comentario.');
+// Cerrar menú al hacer click en un link (solo en mobile)
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (nav.classList.contains('active')) {
+      nav.classList.remove('active');
+    }
   });
 });
 
-cerrar.addEventListener('click', () => {
-  popup.classList.remove('show');
+// Opcional: cerrar menú si se hace click fuera del nav
+document.addEventListener('click', (e) => {
+  if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+    nav.classList.remove('active');
+  }
 });
 
-  
-    

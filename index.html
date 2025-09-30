@@ -14,23 +14,23 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
 </head>
 <body>
-
   <!-- Header -->
   <header class="header">
     <div class="logo">
-      <a href="#inicio">
-        <img src="img/logo.svg" alt="Logo de tu estudio">
+      <a href="/index.html">
+        <img src="./img/logo.svg" alt="Logo de tu estudio">
       </a>
     </div>
     <nav class="nav" id="nav">
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#trabajemos-juntos">Trabajemos juntos</a>
+      <a href="/index.html">Inicio</a>
+      <a href="./page/servicios.html">Servicios</a>
+      <a href="./page/proyectos.html">Proyectos</a>
+      <a href="./page/contacto.html">Trabajemos juntos</a>
     </nav>
     <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
   </header>
@@ -115,26 +115,45 @@
   <a href="#portfolio" class="btn">Ver portfolio completo</a>
 </section>
 <!-- SECCIÓN DE COMENTARIOS -->
-<section class="reviews" id="reseñas">
-  <h2>Lo que dicen nuestros clientes</h2>
-  <div class="review-cards">
-    <div class="review-card">
-      <img src="img/logo1.png" alt="Logo Cliente 1" class="review-logo">
-      <p class="review-text">"Flolu Studio transformó nuestra identidad visual. ¡Excelente trabajo!"</p>
-      <p class="review-author">— Mariel Reyes, Diseñadora de interiores</p>
+<!-- Swiper slider -->
+<section class="reviews-slider">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <p>“Excelente atención, respuesta rápida, creativa y ajustándose a las necesidades de cada pedido. Un placer trabajar con ustedes y sentirnos tan comprendidos.”</p>
+          <h6>Sergio & Milagros</h6>
+          <span>Borken - restó</span>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <p>“Muy buena predisposición y dedicación. Quedé muy conforme con el trabajo que encargué. Los súper recomiendo!”</p>
+          <h6>Cecilia Perotti</h6>
+          <span>Mochi & Co</span>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <p>“Un grupo humano que sabe cómo encarar un proyecto. Muchísima claridad y precisión en las propuestas. ¡Gracias por su creatividad!”</p>
+          <h6>Cecilia Thomas Benchoff</h6>
+          <span>Croquio Arq.</span>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="testimonial-card">
+          <p>“¡Genia Sofi y todas las chicas! Me interpretaron a la perfección y quedé enamorada de mi logo. Súper recomendable.”</p>
+          <h6>Belén Benigni</h6>
+          <span>Calma León</span>
+        </div>
+      </div>
     </div>
-    <div class="review-card">
-      <img src="img/logo2.png" alt="Logo Cliente 2" class="review-logo">
-      <p class="review-text">"Todo el crecimiento de nuestro café fue en manos de ellos. Muy recomendados."</p>
-      <p class="review-author">— María López, Kamby café</p>
-    </div>
-    <div class="review-card">
-      <img src="img/logo6.png" alt="Logo Cliente 3" class="review-logo">
-      <p class="review-text">"Nuestra diseñadora gráfica, de interiores y web!!"</p>
-      <p class="review-author">— Equipo Plan Gourmet Pastas</p>
-    </div>
+    
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
   </div>
 </section>
+
 <section class="work-with-us">
   <div class="work-content">
     <h2>Diseñemos juntos tus ideas</h2>
@@ -172,10 +191,10 @@
       </div>
   
       <nav class="footer-nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#portafolio">portafolio</a>
-        <a href="#contacto">trabajemos juntos </a>
+        <a href="./index.html">Inicio</a>
+        <a href="./page/servicios.html">Servicios</a>
+        <a href="./page/proyectos.html">portafolio</a>
+        <a href="./page/contacto.html">trabajemos juntos </a>
       </nav>
   
        <div class="footer-social">
@@ -197,34 +216,27 @@
   
   <!-- JS -->
   <script src="./JS/index.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 <script>
- function doPost(e) {
-  try {
-    var hoja = SpreadsheetApp.openById("https://docs.google.com/spreadsheets/d/1k3ZjZKVeKMYGRl5E2FBp1E5yYqsz3dhaMAh8YruGQCE/edit?gid=0#gid=0").getSheetByName("comentarios flolu"); // Cambiá Sheet1 si tu hoja tiene otro nombre
-    var data = JSON.parse(e.postData.contents);
-
-    hoja.appendRow([
-      data.nombre || "",
-      data.empresa || "",
-      data.email || "",
-      data.mensaje || "",
-      data.rating || 0,
-      new Date()
-    ]);
-
-    return ContentService.createTextOutput(JSON.stringify({ "result": "success" }))
-      .setMimeType(ContentService.MimeType.JSON);
-
-  } catch (err) {
-    return ContentService.createTextOutput(JSON.stringify({ "result": "error", "message": err }))
-      .setMimeType(ContentService.MimeType.JSON);
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
   }
-}
-
+});
 </script>
-
 </body>
 </html>
 
