@@ -394,6 +394,14 @@ body.menu-open {
   line-height: 1.6;
   color: #1C1C1E;
 }
+.testimonial-author {
+  display: block;
+  margin-top: 16px;
+
+  font-size: 0.8rem;
+  color: rgba(28,28,30,0.6);
+  letter-spacing: 0.02em;
+}
 
 /* botones */
 .slider-btn {
@@ -544,4 +552,48 @@ body.menu-open {
 .footer-copy {
   font-size: 0.75rem;
   color: rgba(28,28,30,0.6);
+}
+
+
+.chat-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+  background: #718BBC;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.chat-float img {
+  width: 26px;
+  height: auto;
+}
+
+.chat-float:hover {
+  transform: translateY(-2px);
+  background: #A3BCD0;
+}
+@media (max-width: 768px) {
+  .chat-float {
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .chat-float img {
+    width: 30px;
+  }
 }
