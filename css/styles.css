@@ -383,9 +383,8 @@ body.menu-open {
 }
 
 .testimonial img {
-  max-height: 40px;
-  margin: 0 auto 24px;
-  opacity: 0.35;
+  max-height: 200px;
+  margin: 0 auto 2px;
   filter: grayscale(100%);
 }
 
