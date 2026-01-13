@@ -3,239 +3,272 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Estudio Gráfico</title>
-
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome para íconos -->
-  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
-
-  <!-- CSS -->
+  <title>Flolu — Diseño que conecta</title>
   <link rel="stylesheet" href="./css/styles.css">
-  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
 </head>
+
 <body>
-  <!-- Header -->
+
+  <!-- HEADER -->
   <header class="header">
-    <div class="logo">
-      <a href="/index.html">
-        <img src="./img/logo.svg" alt="Logo de tu estudio">
+    <div class="header-inner">
+
+      <a href="/" class="logo">
+        <img src="./img/logo-flolu-menu.svg" alt="Flolu – Diseño que conecta">
       </a>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Trabajos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+      
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
     </div>
-    <nav class="nav" id="nav">
-      <a href="/index.html">Inicio</a>
-      <a href="./page/servicios.html">Servicios</a>
-      <a href="./page/proyectos.html">Proyectos</a>
-      <a href="./page/contacto.html">Trabajemos juntos</a>
-    </nav>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
   </header>
 
-  <!-- Hero -->
-  <section class="hero" id="inicio">
-    <div class="hero-content">
-      <h1 class="hero-title">
-        <span class="scroll-right">DISEÑO</span>
-        <span class="scroll-left">QUE CONECTA</span>
-      </h1>
-      <p>Identidades visuales, marcas y experiencias gráficas para destacar en el mundo digital.</p>
-      <a href="#trabajemos-juntos" class="btn">Trabajemos juntos</a>
-    </div>
-  </section>
-  <!-- Main (otras secciones) -->
+  <!-- MENÚ LATERAL MOBILE -->
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Trabajos</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- OVERLAY -->
+  <div class="overlay"></div>
+
+  <!-- CONTENIDO -->
   <main>
-    <!-- Acerca del Estudio -->
-    <section class="about">
-      <div class="about-content">
-        <h6>Acerca del estudio</h6>
-        <h2>Hola! Somos Flolu Studio</h2>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Diseño que conecta</h1>
         <p>
-          Creamos identidades visuales y experiencias gráficas que conectan marcas con personas.
-          Nuestro enfoque combina diseño estratégico y creatividad para destacar en el mundo digital.
+          Creamos identidades visuales y experiencias gráficas
+          que conectan marcas con personas.
         </p>
-        <a href="#portfolio" class="btn">Ver portfolio</a>
-      </div>
-      <div class="about-image">
-        <img src="img/estudio.png" alt="Imagen del estudio">
       </div>
     </section>
-    
     <section class="services-ticker">
       <div class="ticker">
-        <div class="ticker-content">
-          Branding · Identidad Visual · Diseño Web · Packaging · Ilustración · Social Media · Editorial · Fotografía · Manejo de redes  ·  
-          Branding · Identidad Visual · Diseño Web · Packaging · Ilustración · Social Media · Editorial · Fotografía · Manejo de redes  ·
-          Branding · Identidad Visual · Diseño Web · Packaging · Ilustración · Social Media · Editorial · Fotografía · Manejo de redes  ·
-          Branding · Identidad Visual · Diseño Web · Packaging · Ilustración · Social Media · Editorial · Fotografía · Manejo de redes  ·
-          Branding · Identidad Visual · Diseño Web · Packaging · Ilustración · Social Media · Editorial · Fotografía · Manejo de redes  ·
-          Branding · Identidad Visual · Diseño Web · Packaging · Ilustración · Social Media · Editorial · Fotografía · Manejo de redes  ·
-          Branding · Identidad Visual · Diseño Web · Packaging · Ilustración · Social Media · Editorial · Fotografía · Manejo de redes  ·
-        </div>
-      </div>
-    </section>    
-    <!-- Secciones futuras -->
-     <!-- SOBRE MÍ -->
-<section class="about-me">
-  <div class="about-me-content">
-    <h6>Sobre mí</h6>
-    <h2>Hola! Soy Agus</h2>
-    <p>
-      Diseñadora gráfica y creadora de <strong>Flolu Studio</strong>.  
-      Me apasiona transformar ideas en identidades visuales con propósito, estética y estrategia.
-    </p>
-    <a href="#trabajemos-juntos" class="btn">Conectemos</a>
-  </div>
-  <div class="about-me-img">
-    <img src="./img/agus.png" alt="Foto de Agus / Flolu Studio">
-  </div>
-</section>
-
-<!-- MINI INTRO AL PORTFOLIO -->
-<section class="portfolio-intro">
-  <h6>Portfolio</h6>
-  <h2>Marcas que confiaron en mí</h2>
-  <p>
-    Algunos de los proyectos y colaboraciones que realicé en branding, diseño editorial, web y más.
-  </p>
-  <div class="logo-grid">
-    <img src="./img/logo1.png" alt="Logo cliente 1">
-    <img src="./img/logo2.png" alt="Logo cliente 2">
-    <img src="./img/logo3.png" alt="Logo cliente 3">
-    <img src="./img/logo4.png" alt="Logo cliente 4">
-    <img src="./img/logo5.png" alt="Logo cliente 5">
-    <img src="./img/logo6.png" alt="Logo cliente 6">
-    <img src="./img/logo7.png" alt="Logo cliente 7">
-    <img src="./img/logo8.png" alt="Logo cliente 8">
-  </div>
-  <a href="#portfolio" class="btn">Ver portfolio completo</a>
-</section>
-<!-- SECCIÓN DE COMENTARIOS -->
-<!-- Swiper slider -->
-<section class="reviews-slider">
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="testimonial-card">
-          <p>“Excelente atención, respuesta rápida, creativa y ajustándose a las necesidades de cada pedido. Un placer trabajar con ustedes y sentirnos tan comprendidos.”</p>
-          <h6>Sergio & Milagros</h6>
-          <span>Borken - restó</span>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="testimonial-card">
-          <p>“Muy buena predisposición y dedicación. Quedé muy conforme con el diseño de mi pasteleria. Los súper recomiendo!”</p>
-          <h6>Nora Takahashi</h6>
-          <span>Mochi & Co - pastelería vegana</span>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="testimonial-card">
-          <p>“Quedé enamorada de mi proyecto. Pensó en todo, cada detalle, hoy tengo una marca reconocida en todo mi país. ¡Gracias por la ayuda!”</p>
-          <h6>Cecilia Gonzalez</h6>
-          <span>The calli - Café Mexicano</span>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="testimonial-card">
-          <p>“¡Tremendo todo, desde la composición del logo, hasta el packaging, estamos encantados con como se ve nuestro proyecto”</p>
-          <h6>Belén Juerez</h6>
-          <span>Kamby - Café</span>
-        </div>
-      </div>
-    </div>
+        <div class="ticker-track">
+          <span>Branding</span>
+          <span>Packaging</span>
+          <span>Fotografía</span>
+          <span>Redes</span>
+          <span>Diseño web</span>
+          <span>Maquetado Figma</span>
     
-    <!-- Paginación -->
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
-
-<section class="work-with-us">
-  <div class="work-content">
-    <h2>Diseñemos juntos tus ideas</h2>
-    <p>
-      Si tenés un proyecto en mente y querés llevarlo al próximo nivel, 
-      contanos tu idea y trabajemos en equipo para hacerlo realidad.
-    </p>
-
-    <form class="contact-form" action="https://formspree.io/f/meorkaqr" method="POST">
-      <div class="form-group">
-        <input type="text" name="name" placeholder="Tu nombre completo" required>
+          <!-- duplicado para loop continuo -->
+          <span>Branding</span>
+          <span>Packaging</span>
+          <span>Fotografía</span>
+          <span>Redes</span>
+          <span>Diseño web</span>
+          <span>Maquetado Figma</span>
+        </div>
       </div>
-      <div class="form-group">
-        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+    </section>
+      <!-- appoache descripcion -->
+    <section class="approach">
+      <div class="approach-inner">
+    
+        <h2>Diseño con criterio y sensibilidad visual</h2>
+    
+        <p>
+          Trabajo en la construcción de identidades visuales y sistemas gráficos pensados para marcas reales.
+          Mi enfoque combina diseño estratégico, coherencia visual y atención al detalle, acompañando cada
+          proyecto desde la idea hasta su aplicación.
+        </p>
+    
+        <a href="#portfolio" class="approach-link">
+          Trabajemos juntos →
+        </a>
+    
       </div>
-      <div class="form-group">
-        <input type="text" name="company" placeholder="Tu empresa o emprendimiento">
+    </section>
+      <!-- marcas que confiaron -->
+    <section class="testimonials">
+      <div class="testimonials-inner">
+    
+        <h2>identidades que confiaron en mi</h2>
+    
+        <div class="testimonial-slider">
+    
+          <button class="slider-btn prev" aria-label="Anterior">←</button>
+    
+          <div class="testimonial-track">
+    
+            <div class="testimonial active">
+              <img src="img/brands/marca1.svg" alt="Marca 1">
+              <p>
+                Trabajar con Agus fue un proceso muy claro y cuidado.
+                Supo interpretar la esencia de nuestra marca desde el primer momento.
+              </p>
+            </div>
+    
+            <div class="testimonial">
+              <img src="img/brands/marca2.svg" alt="Marca 2">
+              <p>
+                El diseño elevó completamente nuestro producto.
+                Mucha sensibilidad visual y atención al detalle.
+              </p>
+            </div>
+    
+            <div class="testimonial">
+              <img src="img/brands/marca3.svg" alt="Marca 3">
+              <p>
+                Un acompañamiento cercano y profesional.
+                El resultado final superó nuestras expectativas.
+              </p>
+            </div>
+    
+          </div>
+    
+          <button class="slider-btn next" aria-label="Siguiente">→</button>
+    
+        </div>
+    
       </div>
-      <div class="form-group">
-        <textarea name="message" placeholder="Contanos sobre tu proyecto" required></textarea>
-      </div>
-      <button type="submit" class="btn-submit">Enviar</button>
-    </form>
-  </div>
-</section>
-
+    </section>
+      <!-- inicio a mi portafolio -->
+      <section class="projects-hero">
+        <div class="projects-hero-inner">
+          <h1>Proyectos</h1>
+          <p>
+            Selección de trabajos realizados en branding, packaging
+            y diseño visual para marcas reales.
+          </p>
+        </div>
+      </section>
+    
+      <section class="projects-grid">
+        <div class="projects-grid-inner">
+    
+          <article class="project-card">
+            <a href="#">
+              <img src="img/portfolio/proyecto1.jpg" alt="Proyecto 1">
+              <div class="project-meta">
+                <h3>Nombre del proyecto</h3>
+                <span>Branding · 2024</span>
+              </div>
+            </a>
+          </article>
+    
+          <!-- repetir -->
+          <a href="/proyectos" class="approach-link">
+            Ver todos los proyectos →
+          </a>
+          
+        </div>
+      </section>
   </main>
-
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="./img/logo.svg" alt="Logo" />
-        <p>Flolu' Studio © 2025</p>
+    <div class="footer-inner">
+  
+      <p class="footer-brand">
+        Flolu — Diseño que conecta
+      </p>
+  
+      <div class="footer-contact">
+  
+        <a href="mailto:hola@flolu.com" class="footer-link">
+          <img src="img/icons/mail.svg" alt="Mail">
+          <span>hola@flolu.com</span>
+        </a>
+  
+        <a href="https://instagram.com/flolu" target="_blank" class="footer-link">
+          <img src="img/icons/instagram.svg" alt="Instagram">
+          <span>@flolu</span>
+        </a>
+  
+        <a href="https://wa.me/549XXXXXXXXXX" target="_blank" class="footer-link">
+          <img src="img/icons/whatsapp.svg" alt="WhatsApp">
+          <span>WhatsApp</span>
+        </a>
+  
       </div>
   
-      <nav class="footer-nav">
-        <a href="./index.html">Inicio</a>
-        <a href="./page/servicios.html">Servicios</a>
-        <a href="./page/proyectos.html">portafolio</a>
-        <a href="./page/contacto.html">trabajemos juntos </a>
-      </nav>
+      <p class="footer-copy">
+        © 2026
+      </p>
   
-       <div class="footer-social">
-      <a href="https://instagram.com" target="_blank">
-        <img src="./img/instagram (1).png" alt="Instagram" class="icon">
-      </a>
-      <a href="https://instagram.com" target="_blank">
-        <img src="./img/behance.png" alt="behance" class="icon">
-      </a>
-      <a href="https://linkedin.com" target="_blank">
-        <img src="./img/linkedin.png" alt="LinkedIn" class="icon">
-      </a>
-      <a href="mailto:tuemail@gmail.com">
-        <img src="./img/email.png" alt="Email" class="icon">
-      </a>
-    </div>
     </div>
   </footer>
   
-  <!-- JS -->
-  <script src="./JS/index.js"></script>
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
+  <script src="script.js"></script>
+  <script>const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.mobile-nav');
+    const overlay = document.querySelector('.overlay');
+    const body = document.body;
+    
+    toggle.addEventListener('click', () => {
+      menu.classList.add('open');
+      overlay.classList.add('active');
+      body.classList.add('menu-open');
+    });
+    
+    overlay.addEventListener('click', () => {
+      menu.classList.remove('open');
+      overlay.classList.remove('active');
+      body.classList.remove('menu-open');
+    });
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    const testimonials = document.querySelectorAll('.testimonial');
+const prevBtn = document.querySelector('.slider-btn.prev');
+const nextBtn = document.querySelector('.slider-btn.next');
 
-<script>
-const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  }
+let currentIndex = 0;
+let interval;
+
+function showTestimonial(index) {
+  testimonials.forEach(t => t.classList.remove('active'));
+  testimonials[index].classList.add('active');
+  currentIndex = index;
+}
+
+function nextTestimonial() {
+  const next = (currentIndex + 1) % testimonials.length;
+  showTestimonial(next);
+}
+
+function prevTestimonial() {
+  const prev = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(prev);
+}
+
+nextBtn.addEventListener('click', () => {
+  nextTestimonial();
+  resetInterval();
 });
-</script>
+
+prevBtn.addEventListener('click', () => {
+  prevTestimonial();
+  resetInterval();
+});
+
+function startInterval() {
+  interval = setInterval(nextTestimonial, 5000);
+}
+
+function resetInterval() {
+  clearInterval(interval);
+  startInterval();
+}
+
+startInterval();
+
+    </script>
 </body>
 </html>
-
