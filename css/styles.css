@@ -352,7 +352,7 @@ body.menu-open {
 }
 
 .testimonials h2 {
-  font-size: 1rem;
+  font-size: 28px;
   font-weight: 500;
   margin-bottom: 48px;
 }
@@ -375,6 +375,11 @@ body.menu-open {
   inset: 0;
   opacity: 0;
   transition: opacity 0.4s ease;
+  background: rgba(255,255,255,0.85);
+  padding: 40px 32px;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 24px rgba(28,28,30,0.04);
 }
 
 .testimonial.active {
@@ -383,8 +388,8 @@ body.menu-open {
 }
 
 .testimonial img {
-  max-height: 200px;
-  margin: 0 auto 2px;
+  max-width: 200px;
+  margin: 0 auto 10px;
   filter: grayscale(100%);
 }
 
@@ -583,16 +588,4 @@ body.menu-open {
 .chat-float:hover {
   transform: translateY(-2px);
   background: #A3BCD0;
-}
-@media (max-width: 768px) {
-  .chat-float {
-    bottom: 24px;
-    right: 24px;
-    width: 48px;
-    height: 48px;
-  }
-
-  .chat-float img {
-    width: 30px;
-  }
 }
