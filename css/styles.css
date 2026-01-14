@@ -589,3 +589,97 @@ body.menu-open {
   transform: translateY(-2px);
   background: #A3BCD0;
 }
+
+
+
+/* =========================
+   CONTACTO
+========================= */
+.contact {
+  position: relative;
+  padding: 120px 32px 96px;
+
+  /* Fondo continuo: inicia como proyectos y termina como footer azul gris */
+  background:#C9D7E4
+}
+
+.contact-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 500;
+  color: #1C1C1E;
+  margin-bottom: 16px;
+}
+
+.contact p {
+  font-size: 1rem;
+  color: #1C1C1E;
+  opacity: 0.8;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(28,28,30,0.15);
+  background: #FFFFFF;
+  color: #1C1C1E;
+  width: 100%;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #718BBC;
+}
+
+.contact-form button {
+  align-self: flex-start;
+
+  background-color: #718BBC; /* color de identidad */
+  color: #FFFFFF;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #5a6d97; /* un poco más oscuro al hover */
+  opacity: 0.9;
+}
+
+/* Desktop: más aire y alineado editorial */
+@media (min-width: 1024px) {
+  .contact {
+    padding: 160px 48px 120px;
+  }
+
+  .contact-inner {
+    margin-left: 64px; /* mantiene flujo editorial sin romper */
+  }
+}
