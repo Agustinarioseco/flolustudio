@@ -58,12 +58,23 @@
               coherencia y una mirada sensible orientada a marcas reales.
             </p>
           </header>
-      
+          <div class="services-filters">
+            <button class="filter-btn active" data-filter="all">Ver todo</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+            <button class="filter-btn" data-filter="fotografia">Fotografía</button>
+            <button class="filter-btn" data-filter="packaging">Packaging</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="papeleria">Papelería</button>
+            <button class="filter-btn" data-filter="asesoria">Asesoría</button>
+            <button class="filter-btn" data-filter="redes">Redes</button>
+          </div>
+          
+          
           <div class="services-grid">
       
             <!-- ================= BRANDING ================= -->
       
-            <article class="service-card highlight">
+            <article class="service-card highlight"data-category="branding">
               <h3>Manual de Marca Completo</h3>
               <p class="service-desc">
                 Sistema visual integral para asegurar una aplicación consistente
@@ -78,7 +89,7 @@
               <p class="service-price">Valor: $375.000</p>
             </article>
       
-            <article class="service-card">
+            <article class="service-card" data-category="branding">
               <h3>Manual Básico de Marca</h3>
               <p class="service-desc">
                 Lineamientos esenciales para emprendedores que necesitan
@@ -93,7 +104,7 @@
               <p class="service-price">Valor: $190.000</p>
             </article>
       
-            <article class="service-card">
+            <article class="service-card" data-category="branding">
               <h3>Rediseño de Marca</h3>
               <p class="service-desc">
                 Actualización visual para marcas con trayectoria que buscan
@@ -108,7 +119,7 @@
               <p class="service-price">Valor: $175.000</p>
             </article>
       
-            <article class="service-card">
+            <article class="service-card"data-category="branding">
               <h3>Identidad Visual Completa</h3>
               <p class="service-desc">
                 Identidad profesional para emprendedores que comienzan
@@ -123,7 +134,7 @@
               <p class="service-price">Valor: $95.000</p>
             </article>
       
-            <article class="service-card">
+            <article class="service-card" data-category="branding">
               <h3>Logo simple / Isologo</h3>
               <p class="service-desc">
                 Solución visual clara y funcional para marcas emergentes
@@ -140,7 +151,7 @@
       
             <!-- ================= PACKAGING ================= -->
       
-            <article class="service-card">
+            <article class="service-card" data-category="packaging">
               <h3>Packaging</h3>
               <p class="service-desc">
                 Diseño de envases y sistemas gráficos adaptados
@@ -155,7 +166,7 @@
       
             <!-- ================= REDES ================= -->
       
-            <article class="service-card">
+            <article class="service-card" data-category="fotografia redes">
               <h3>Redes sociales</h3>
               <p class="service-desc">
                 Diseño de piezas gráficas para redes,
@@ -170,7 +181,7 @@
       
             <!-- ================= FOTO ================= -->
       
-            <article class="service-card">
+            <article class="service-card" data-category="fotografia">
               <h3>Edición fotográfica</h3>
               <p class="service-desc">
                 Ajustes de color, luz y estética general.
@@ -185,7 +196,7 @@
       
             <!-- ================= PAPELERÍA ================= -->
       
-            <article class="service-card">
+            <article class="service-card" data-category="papeleria">
               <h3>Papelería comercial</h3>
               <p class="service-desc">
                 Piezas impresas alineadas a la identidad visual de la marca.
@@ -199,7 +210,7 @@
       
             <!-- ================= ASESORÍA ================= -->
       
-            <article class="service-card highlight">
+            <article class="service-card highlight" data-category="asesoria">
               <h3>Asesoría en diseño</h3>
               <p class="service-desc">
                 Sesiones personalizadas para ordenar marcas,
@@ -208,6 +219,40 @@
               <p class="service-price">$18.000 / hora</p>
             </article>
       
+<!-- ================= Diseño web ================= -->
+            <article class="service-card highlight" data-category="web">
+              <h3>Diseño y Desarrollo Web</h3>
+            
+              <p class="service-desc">
+                Diseño y desarrollo de sitios web funcionales y estéticos,
+                alineados a la identidad de marca y optimizados para una
+                experiencia clara en todos los dispositivos.
+              </p>
+            
+              <ul class="service-list">
+                <li>
+                  <span>Landing page</span>
+                  <strong>$130.000</strong>
+                </li>
+                <li>
+                  <span>Sitio institucional</span>
+                  <strong>$220.000</strong>
+                </li>
+                <li>
+                  <span>UX / UI (diseño de interfaz)</span>
+                  <strong>$90.000</strong>
+                </li>
+                <li>
+                  <span>Optimización web</span>
+                  <strong>$45.000</strong>
+                </li>
+                <li>
+                  <span>Edición HTML / CSS / JS</span>
+                  <strong>$25.000</strong>
+                </li>
+              </ul>
+            </article>
+            
           </div>
       
         </div>
@@ -319,6 +364,33 @@ function resetInterval() {
 }
 
 startInterval();
+
+    </script>
+    <script>
+      const filterButtons = document.querySelectorAll('.filter-btn');
+const serviceCards = document.querySelectorAll('.service-card');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.dataset.filter;
+
+    // estado activo
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    serviceCards.forEach(card => {
+      const category = card.dataset.category;
+
+      const categories = card.dataset.category.split(' ');
+
+if (filter === 'all' || categories.includes(filter)) {
+
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
 
     </script>
 </body>

@@ -1053,3 +1053,46 @@ body.menu-open {
 .modal-close:hover {
   background: rgba(0,0,0,0.1);
 }
+
+/* =========================
+   SERVICES FILTERS
+========================= */
+
+.services-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 64px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid rgba(28,28,30,0.2);
+  border-radius: 999px;
+  padding: 8px 18px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  color: #1C1C1E;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+  border-color: #718BBC;
+  color: #718BBC;
+}
+
+.filter-btn.active {
+  background: #718BBC;
+  color: #fff;
+  border-color: #718BBC;
+}
+
+/* ocultar cards */
+.service-card.hidden {
+  display: none;
+}
