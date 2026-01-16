@@ -896,6 +896,8 @@ body.menu-open {
 }
 
 .project-card img {
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
   width: 100%;
   height: 220px; /* altura fija que quieras */
   object-fit: cover; /* recorta sin deformar */
@@ -1000,7 +1002,7 @@ body.menu-open {
 }
 
 /* HERO */
-.modal-hero img {
+.modal-hero p {
   width: 100%;
   border-radius: 8px;
   margin: 32px 0;
