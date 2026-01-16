@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flolu — Diseño que conecta</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="shortcut icon" href="/img/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+
+      <a href="/" class="logo">
+        <img src="/img/logo-flolu-menu.svg" alt="Flolu – Diseño que conecta">
+      </a>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/pages/servicios.html">Servicios</a></li>
+          <li><a href="/pages/proyectos.html">Trabajos</a></li>
+          <li><a href="https://forms.gle/Q2aKq6AwvaQL2Mbf8">Contacto</a></li>
+        </ul>
+      </nav>
+      
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- MENÚ LATERAL MOBILE -->
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="/index.html">Inicio</a></li>
+      <li><a href="../pages/servicios.html">Servicios</a></li>
+      <li><a href="../pages/proyectos.html">Proyectos</a></li>
+      <li><a href="https://forms.gle/Q2aKq6AwvaQL2Mbf8">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- OVERLAY -->
+  <div class="overlay"></div>
+  <main>
+    <section class="projects-hero">
+        <div class="projects-hero-inner">
+      
+          <img src="img/proyectos/hero-proyectos.jpg" alt="Proyectos Flolu">
+      
+          <div class="projects-hero-content">
+            <h1>Proyectos</h1>
+            <p>
+              Selección de identidades visuales, sistemas gráficos y desarrollos
+              de marca realizados para proyectos reales.
+            </p>
+          </div>
+      
+        </div>
+      </section>
+      
+    <!-- =========================
+         GRILLA DE PROYECTOS
+    ========================== -->
+    <section class="projects-grid">
+  
+      <article class="project-card">
+        <img src="/img/proyectos/melrose-mockup.png" alt="Marca A">
+        <h3>MELROSE</h3>
+        <p>Diseño Integral · 2026</p>
+        <a href="#" class="project-link" data-modal="proyecto-marca-a">
+          Ver proyecto
+        </a>
+      </article>
+  
+      <article class="project-card">
+        <img src="/img/proyectos/melrose-mockup.png" alt="Marca B">
+        <h3>Marca B</h3>
+        <p>Packaging · 2023</p>
+        <a href="#" class="project-link" data-modal="proyecto-marca-b">
+          Ver proyecto
+        </a>
+      </article>
+  
+      <article class="project-card">
+        <img src="img/proyectos/marca-c/cover.jpg" alt="Marca C">
+        <h3>Marca C</h3>
+        <p>Branding & redes · 2022</p>
+        <a href="#" class="project-link" data-modal="proyecto-marca-c">
+          Ver proyecto
+        </a>
+      </article>
+  
+    </section>
+  
+    <!-- =========================
+         OVERLAY ÚNICO
+    ========================== -->
+    <div class="project-overlay"></div>
+  
+    <!-- =========================
+         MODAL — MARCA A
+    ========================== -->
+    <div class="project-modal" id="proyecto-marca-a">
+        <div class="modal-inner">
+      
+          <button class="modal-close">×</button>
+      
+          <header class="modal-header">
+            <h2>Marca A</h2>
+            <p>Identidad visual · 2024</p>
+          </header>
+      
+          <section class="modal-hero">
+            <img src="img/proyectos/marca-a/cover.jpg" alt="">
+          </section>
+      
+          <section class="modal-section">
+            <h3>Proceso</h3>
+            <div class="modal-grid">
+              <img src="img/proyectos/marca-a/logo.jpg">
+              <img src="img/proyectos/marca-a/construccion.jpg">
+              <img src="img/proyectos/marca-a/ilustracion.jpg">
+            </div>
+          </section>
+      
+          <section class="modal-section">
+            <h3>Aplicaciones</h3>
+            <div class="modal-grid">
+              <img src="img/proyectos/marca-a/papeleria.jpg">
+              <img src="img/proyectos/marca-a/redes.jpg">
+            </div>
+          </section>
+      
+        </div>
+      </div>
+      
+    <!-- =========================
+         MODAL — MARCA B
+    ========================== -->
+    <div class="project-modal" id="proyecto-marca-b">
+
+      <div class="modal-inner">
+        <button class="modal-close">×</button>
+  
+        <header class="modal-header">
+          <h2>Marca B</h2>
+          <p>Packaging · 2023</p>
+        </header>
+  
+        <section class="modal-hero">
+          <img src="img/proyectos/marca-b/mockup-hero.jpg" alt="">
+        </section>
+  
+        <section class="modal-section">
+          <h3>Desarrollo</h3>
+          <div class="modal-grid">
+            <img src="img/proyectos/marca-b/moldes.jpg">
+            <img src="img/proyectos/marca-b/etiquetas.jpg">
+          </div>
+        </section>
+  
+      </div>
+    </div>
+  
+    <!-- =========================
+         MODAL — MARCA C
+    ========================== -->
+    <div class="project-modal" id="proyecto-marca-c">
+  
+      <div class="modal-inner">
+        <button class="modal-close">×</button>
+        <header class="modal-header">
+          <h2>Marca C</h2>
+          <p>Branding & redes · 2022</p>
+        </header>
+  
+        <section class="modal-hero">
+          <img src="img/proyectos/marca-c/mockup-hero.jpg" alt="">
+        </section>
+  
+        <section class="modal-section">
+          <h3>Identidad</h3>
+          <div class="modal-grid">
+            <img src="img/proyectos/marca-c/logo.jpg">
+            <img src="img/proyectos/marca-c/aplicaciones.jpg">
+          </div>
+        </section>
+  
+      </div>
+    </div>
+  
+  </main>
+  
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+      
+          <p class="footer-brand">
+            Flolu — Diseño que conecta
+          </p>
+      
+          <div class="footer-contact">
+      
+            <a href="mailto:floludesign@gmail.com" class="footer-link">
+              <img src="/img/email.png" alt="Mail">
+              <span>flolu.design@gmail.com</span>
+            </a>
+      
+            <a href="https://www.instagram.com/flolu.studio/" target="_blank" class="footer-link">
+              <img src="/img/instagram.png" alt="Instagram">
+              <span>@flolu.studio</span>
+            </a>
+      
+            <a href="https://www.behance.net/agustinarioseco1" target="_blank" class="footer-link">
+              <img src="/img/behance.png" alt="Behance">
+              <span>Behance</span>
+            </a>
+      
+            <a href="https://www.linkedin.com/in/agustina-rioseco-5066a0279/" target="_blank" class="footer-link">
+              <img src="/img/linkedin.png" alt="linkedin">
+              <span>Linkedin</span>
+            </a>
+          </div>
+      
+          <p class="footer-copy">
+            © 2026
+          </p>
+      
+        </div>
+      </footer>
+      <a
+      href="https://wa.me/5492995010881"
+      class="chat-float"
+      target="_blank"
+      aria-label="Hablemos por WhatsApp"
+    >
+      <img src="/img/messege.png" alt="hablemos"></a>
+    
+  <script>const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.mobile-nav');
+    const overlay = document.querySelector('.overlay');
+    const body = document.body;
+    
+    toggle.addEventListener('click', () => {
+      menu.classList.add('open');
+      projectOverlay.classList.add('active');
+      body.classList.add('menu-open');
+    });
+    
+    overlay.addEventListener('click', () => {
+      menu.classList.remove('open');
+      projectOverlay.classList.remove('active');
+      body.classList.remove('menu-open');
+    });
+
+    const testimonials = document.querySelectorAll('.testimonial');
+const prevBtn = document.querySelector('.slider-btn.prev');
+const nextBtn = document.querySelector('.slider-btn.next');
+
+let currentIndex = 0;
+let interval;
+
+function showTestimonial(index) {
+  testimonials.forEach(t => t.classList.remove('active'));
+  testimonials[index].classList.add('active');
+  currentIndex = index;
+}
+
+function nextTestimonial() {
+  const next = (currentIndex + 1) % testimonials.length;
+  showTestimonial(next);
+}
+
+function prevTestimonial() {
+  const prev = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(prev);
+}
+
+nextBtn.addEventListener('click', () => {
+  nextTestimonial();
+  resetInterval();
+});
+
+prevBtn.addEventListener('click', () => {
+  prevTestimonial();
+  resetInterval();
+});
+
+function startInterval() {
+  interval = setInterval(nextTestimonial, 5000);
+}
+
+function resetInterval() {
+  clearInterval(interval);
+  startInterval();
+}
+
+startInterval();
+
+    </script>
+    <script>
+        const projectLinks = document.querySelectorAll('.project-link');
+const projectOverlay = document.querySelector('.project-overlay');
+const modals = document.querySelectorAll('.project-modal');
+
+if (projectLinks.length && projectOverlay && modals.length) {
+
+  projectLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const modalId = link.dataset.modal;
+      const modal = document.getElementById(modalId);
+
+      if (!modal) return;
+
+      modal.classList.add('active');
+      projectOverlay.classList.add('active');
+      document.body.classList.add('menu-open');
+    });
+  });
+
+  function closeModal() {
+    modals.forEach(modal => modal.classList.remove('active'));
+    projectOverlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  }
+
+  projectOverlay.addEventListener('click', closeModal);
+
+  document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+}
+
+    </script>
+</body>
+</html>

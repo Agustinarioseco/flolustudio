@@ -683,3 +683,345 @@ body.menu-open {
     margin-left: 64px; /* mantiene flujo editorial sin romper */
   }
 }
+
+
+/* =========================
+   SERVICES — CATÁLOGO
+========================= */
+
+.services {
+  position: relative;
+  padding: 120px 32px 140px;
+  background:
+    radial-gradient(
+      60% 50% at 15% 20%,
+      rgba(163,188,208,0.55) 0%,
+      rgba(163,188,208,0.3) 40%,
+      rgba(163,188,208,0) 70%
+    ),
+    radial-gradient(
+      50% 40% at 85% 30%,
+      rgba(224,215,218,0.6) 0%,
+      rgba(224,215,218,0.35) 45%,
+      rgba(224,215,218,0) 75%
+    ),
+    linear-gradient(to bottom, #C9D7E4 0%, #C9D7E4 100%);
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(201,215,228,0) 0%,
+    rgba(201,215,228,0.8) 30%,
+    rgba(201,215,228,1) 100%
+  );
+}
+
+.services-inner {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.services-header {
+  max-width: 520px;
+  margin-bottom: 96px;
+}
+
+.services-header h2 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.services-header p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #1C1C1E;
+  opacity: 0.9;
+}
+
+/* Grid */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 48px;
+}
+
+/* Card */
+
+.service-card {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(8px);
+  padding: 40px 36px;
+  border-radius: 20px;
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.04);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 28px 70px rgba(0,0,0,0.06);
+}
+
+/* Títulos */
+
+.service-card h3 {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #1C1C1E;
+}
+
+/* Texto */
+
+.service-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: #1C1C1E;
+  opacity: 0.85;
+}
+
+/* Lista */
+
+.service-list {
+  list-style: none;
+}
+
+.service-list li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(28,28,30,0.08);
+}
+
+.service-list li:last-child {
+  border-bottom: none;
+}
+
+.service-list strong {
+  font-weight: 500;
+  color: #718BBC;
+}
+
+/* Precio destacado */
+
+.service-price {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #718BBC;
+  margin-top: 24px;
+}
+
+/* Card destacada */
+
+.service-card.highlight {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255,255,255,0.9),
+    rgba(255,255,255,0.6)
+  );
+  border: 1px solid rgba(113,139,188,0.25);
+}
+
+/* Responsive ajustes */
+
+@media (max-width: 768px) {
+  .services {
+    padding: 96px 24px 120px;
+  }
+
+  .services-header {
+    margin-bottom: 72px;
+  }
+
+  .services-grid {
+    gap: 32px;
+  }
+
+  .service-card {
+    padding: 32px 28px;
+  }
+}
+/* =========================
+   PROJECTS GRID
+========================= */
+.projects-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 96px 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 48px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #718BBC;
+  margin-bottom: 12px;
+}
+
+.project-link {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #1C1C1E;
+  position: relative;
+}
+
+.project-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: #718BBC;
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+.project-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(28,28,30,0.35);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9998;
+}
+
+.project-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+.project-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.project-modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-inner {
+  width: min(900px, 90vw);
+  max-height: 85vh;
+  overflow-y: auto;
+  background: #ffffff;
+  padding: 64px;
+  border-radius: 12px;
+  position: relative;
+}
+
+/* HEADER */
+.modal-header h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.modal-header p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #718BBC;
+}
+
+/* HERO */
+.modal-hero img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 48px 0;
+}
+
+/* SECTIONS */
+.modal-section {
+  margin-bottom: 64px;
+}
+
+.modal-section h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+/* GRID IMÁGENES */
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.modal-grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* CLOSE */
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.05);
+  color: #1C1C1E;
+
+  font-size: 1.25rem;
+  cursor: pointer;
+
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
