@@ -319,7 +319,7 @@ body.menu-open {
 ========================= */
 .testimonials {
   position: relative;
-  padding: 40px 32px 96px;
+  padding: 40px 32px 0px;
   overflow: hidden;
 
   background:
@@ -346,7 +346,6 @@ body.menu-open {
 
 
 .testimonials-inner {
-  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
@@ -367,7 +366,7 @@ body.menu-open {
 .testimonial-track {
   position: relative;
   width: 100%;
-  max-width: 640px;
+;
 }
 
 .testimonial {
@@ -375,8 +374,13 @@ body.menu-open {
   inset: 0;
   opacity: 0;
   transition: opacity 0.4s ease;
-  background: rgba(255,255,255,0.85);
-  padding: 40px 32px;
+  background: linear-gradient(
+    to bottom,
+    #C9D7E4 0%,
+    rgba(201,215,228,0.85) 40%,
+    rgba(201,215,228,0.4) 70%,
+  );
+  padding: 10px 32px;
   border-radius: 16px;
 
   box-shadow: 0 8px 24px rgba(28,28,30,0.04);
@@ -425,7 +429,7 @@ body.menu-open {
    proyectos
 ========================= */
 .projects-hero {
-  padding: 60px 32px 96px;
+  padding: 60px 32px 0px;
   background: #C9D7E4;
 }
 
@@ -451,7 +455,6 @@ body.menu-open {
 }
 
 .projects-grid-inner {
-  max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -496,25 +499,21 @@ body.menu-open {
    FOOTER
 ========================= */
 /* =========================
-   FOOTER (continuación de proyectos)
+   FOOTER
 ========================= */
-
 .footer {
   position: relative;
-  padding: 10px 32px 64px;
-
+  padding: 64px 32px;
   background: linear-gradient(
     to bottom,
     #C9D7E4 0%,
     rgba(201,215,228,0.85) 40%,
     rgba(201,215,228,0.4) 70%,
-    rgba(201,215,228,0) 100%
+    #718BBC 100%
   );
 }
 
-
 .footer-inner {
-  max-width: 680px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -558,7 +557,6 @@ body.menu-open {
   color: rgba(28,28,30,0.6);
 }
 
-
 .chat-float {
   position: fixed;
   bottom: 32px;
@@ -597,14 +595,13 @@ body.menu-open {
 ========================= */
 .contact {
   position: relative;
-  padding: 120px 32px 96px;
+  padding: 20px 32px 96px;
 
   /* Fondo continuo: inicia como proyectos y termina como footer azul gris */
   background:#C9D7E4
 }
 
 .contact-inner {
-  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -857,31 +854,67 @@ body.menu-open {
   }
 }
 /* =========================
-   PROJECTS GRID
+   PROYECTOS
 ========================= */
-.projects-grid {
-  max-width: 1200px;
+.projects-hero {
+  padding: 160px 32px 64px; /* más separación del navbar */
+  background: #C9D7E4;
+  text-align: left;
+}
+
+.projects-hero-inner {
+  max-width: 720px;
   margin: 0 auto;
-  padding: 96px 32px;
+}
+
+.projects-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.projects-hero p {
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0 0;
+}
+
+/* Grilla */
+.projects-grid {
+  margin: 0 auto;
+  padding: 64px 32px 120px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 48px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .project-card img {
   width: 100%;
+  height: 220px; /* altura fija que quieras */
+  object-fit: cover; /* recorta sin deformar */
   border-radius: 8px;
-  margin-bottom: 16px;
+  display: block;
+}
+
+.project-card img:hover {
+  transform: scale(1.02);
 }
 
 .project-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 4px;
 }
 
 .project-card p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #718BBC;
   margin-bottom: 12px;
 }
@@ -903,7 +936,6 @@ body.menu-open {
   background: #718BBC;
 }
 
-
 /* =========================
    OVERLAY
 ========================= */
@@ -923,7 +955,6 @@ body.menu-open {
   pointer-events: all;
 }
 
-
 /* =========================
    MODAL
 ========================= */
@@ -931,12 +962,13 @@ body.menu-open {
   position: fixed;
   inset: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 9999;
+  padding: 32px;
 }
 
 .project-modal.active {
@@ -952,6 +984,7 @@ body.menu-open {
   padding: 64px;
   border-radius: 12px;
   position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
 /* HEADER */
@@ -970,12 +1003,12 @@ body.menu-open {
 .modal-hero img {
   width: 100%;
   border-radius: 8px;
-  margin: 48px 0;
+  margin: 32px 0;
 }
 
 /* SECTIONS */
 .modal-section {
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 }
 
 .modal-section h3 {
@@ -996,32 +1029,25 @@ body.menu-open {
   border-radius: 6px;
 }
 
-/* CLOSE */
-
+/* CLOSE BUTTON */
 .modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
-
+  top: 16px;
+  right: 16px;
   width: 36px;
   height: 36px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: none;
   border-radius: 50%;
-
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0,0,0,0.05);
   color: #1C1C1E;
-
   font-size: 1.25rem;
   cursor: pointer;
-
   z-index: 10;
 }
 
 .modal-close:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0,0,0,0.1);
 }
